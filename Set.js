@@ -1,7 +1,9 @@
 class Set {
-  constructor() {[]}
+  constructor() {this.array = []}
 
-  add() {}
+  add(item) {
+    this.array.push(item);
+  }
 
   remove() {}
 
