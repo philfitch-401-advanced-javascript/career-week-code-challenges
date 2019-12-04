@@ -21,6 +21,7 @@ describe('Set', () => {
   })
 
   it('has', () => {
+    let set = new Set;
     set.add('balloon');
     expect(set.has('balloon')).toBe(true);
   })
