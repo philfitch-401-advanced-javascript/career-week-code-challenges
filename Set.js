@@ -2,7 +2,9 @@ class Set {
   constructor() {this.array = []}
 
   add(item) {
-    this.array.push(item);
+    if(!this.array.includes(item)) {
+      this.array.push(item);
+    }
   }
 
   remove(item) {
