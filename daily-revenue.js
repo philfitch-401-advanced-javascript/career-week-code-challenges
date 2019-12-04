@@ -9,10 +9,16 @@ function revenue(transactions) {
     newDateArray.push(date[2]);
     newDateArray.push(date[1]);
     newDateArray.push(date[3]);
-    let newDateString = newDateArray.join(' ');
-    result.newDateString? newDateString += obj.price : result.newDateString = obj.price;
+    date = newDateArray.join(' ');
+    return {
+      price: obj.price,
+      date: date
+    }
   })
-  
+  for(let i = 0; i < dates.length; i++) {
+    let key = dates[i].date;
+    result[key] ? result[key] += dates[i].price : result[key] = dates[i].price;
+  }
   return result;
 };
 
