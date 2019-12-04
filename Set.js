@@ -5,9 +5,16 @@ class Set {
     this.array.push(item);
   }
 
-  remove() {}
+  remove(item) {
+    if(this.array.includes(item)) {
+      let idx = this.array.indexOf(item);
+      this.array.splice([idx], 1);
+    }
+  }
 
-  has() {}
+  has(item) {
+    return this.array.includes(item);
+  }
 
   intersection() {}
 

@@ -11,11 +11,14 @@ describe('Set', () => {
   })
 
   it('remove', () => {
-
+    set.add('balloon');
+    set.remove('balloon');
+    expect(set.array).toEqual([]);
   })
 
   it('has', () => {
-
+    set.add('balloon');
+    expect(set.has('balloon')).toBe(true);
   })
 
   it('intersection', () => {
