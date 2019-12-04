@@ -1,0 +1,5 @@
+language: node_js
+services:
+node_js:
+  - "stable"
+
