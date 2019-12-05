@@ -58,7 +58,13 @@ describe('Set', () => {
   })
 
   it('static union', () => {
-
+    let set1 = new Set;
+    set1.add('balloons');
+    set1.add('clowns');
+    let set2 = new Set;
+    set2.add('balloons');
+    set2.add('cake');
+    expect((Set.union(set1, set2).array)).toEqual(['balloons', 'clowns', 'cake']);
   })
 
   it('static difference', () => {

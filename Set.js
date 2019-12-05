@@ -63,7 +63,15 @@ class Set {
     return intersectionSet;
   }
 
-  static union(set1, set2) {}
+  static union(set1, set2) {
+    let unionSet = set1;
+    for(let i = 0; i < set2.array.length; i++) {
+      if(!unionSet.array.includes(set2.array[i])) {
+        unionSet.array.push(set2.array[i]);
+      }
+    }
+    return unionSet;
+  }
 
   static difference(set1, set2) {}
 }
