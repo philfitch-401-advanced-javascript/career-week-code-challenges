@@ -20,7 +20,14 @@ class Set {
 
   intersection() {}
 
-  union() {}
+  union(uArray) {
+    for(let i = 0; i < uArray.length; i++) {
+      if(!this.array.includes(uArray[i])) {
+        this.array.push(uArray[i]);
+      }
+    }
+    return this.array;
+  }
 
   difference() {}
 
