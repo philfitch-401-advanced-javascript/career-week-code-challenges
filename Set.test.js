@@ -68,6 +68,12 @@ describe('Set', () => {
   })
 
   it('static difference', () => {
-
+    let set1 = new Set;
+    set1.add('balloons');
+    set1.add('clowns');
+    let set2 = new Set;
+    set2.add('balloons');
+    set2.add('cake');
+    expect((Set.difference(set1, set2).array)).toEqual(['clowns', 'cake']);
   })
 })

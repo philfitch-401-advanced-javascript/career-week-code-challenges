@@ -73,7 +73,20 @@ class Set {
     return unionSet;
   }
 
-  static difference(set1, set2) {}
+  static difference(set1, set2) {
+    let differenceSet = new Set;
+    for(let i = 0; i < set1.array.length; i++) {
+      if(!set2.array.includes(set1.array[i])) {
+        differenceSet.array.push(set1.array[i]);
+      }
+    }
+    for(let i = 0; i < set2.array.length; i++) {
+      if(!set1.array.includes(set2.array[i])) {
+        differenceSet.array.push(set2.array[i]);
+      }
+    }
+    return differenceSet;
+  }
 }
 
 module.exports = { Set };
