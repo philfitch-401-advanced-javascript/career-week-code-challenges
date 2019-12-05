@@ -53,11 +53,19 @@ class Set {
     return differenceSet;
   }
 
-  static intersection() {}
+  static intersection(set1, set2) {
+    let intersectionSet = new Set;
+    for(let i = 0; i < set2.array.length; i++) {
+      if(set1.array.includes(set2.array[i])) {
+        intersectionSet.array.push(set2.array[i]);
+      }
+    }
+    return intersectionSet;
+  }
 
-  static union() {}
+  static union(set1, set2) {}
 
-  static difference() {}
+  static difference(set1, set2) {}
 }
 
 module.exports = { Set };
