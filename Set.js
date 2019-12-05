@@ -18,18 +18,40 @@ class Set {
     return this.array.includes(item);
   }
 
-  intersection() {}
-
-  union(uArray) {
-    for(let i = 0; i < uArray.length; i++) {
-      if(!this.array.includes(uArray[i])) {
-        this.array.push(uArray[i]);
+  intersection(iArray) {
+    let intersectionSet = new Set;
+    for(let i = 0; i < iArray.length; i++) {
+      if(this.array.includes(iArray[i])) {
+        intersectionSet.array.push(iArray[i]);
       }
     }
-    return this.array;
+    return intersectionSet;
   }
 
-  difference() {}
+  union(uArray) {
+    let unionSet = this;
+    for(let i = 0; i < uArray.length; i++) {
+      if(!unionSet.array.includes(uArray[i])) {
+        unionSet.array.push(uArray[i]);
+      }
+    }
+    return unionSet;
+  }
+
+  difference(dArray) {
+    let differenceSet = new Set;
+    for(let i = 0; i < this.array.length; i++) {
+      if(!dArray.includes(this.array[i])) {
+        differenceSet.array.push(this.array[i]);
+      }
+    }
+    for(let i = 0; i < dArray.length; i++) {
+      if(!this.array.includes(dArray[i])) {
+        differenceSet.array.push(dArray[i]);
+      }
+    }
+    return differenceSet;
+  }
 
   static intersection() {}
 

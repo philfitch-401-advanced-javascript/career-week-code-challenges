@@ -30,21 +30,21 @@ describe('Set', () => {
     let set = new Set;
     set.add('balloons');
     set.add('clowns');
-    expect(set.intersection(['balloons', 'cake'])).toEqual(['balloons']);
+    expect((set.intersection(['balloons', 'cake'])).array).toEqual(['balloons']);
   })
 
   it('union', () => {
     let set = new Set;
     set.add('balloons');
     set.add('clowns');
-    expect(set.union(['balloons', 'cake'])).toEqual(['balloons', 'clowns', 'cake']);
+    expect((set.union(['balloons', 'cake'])).array).toEqual(['balloons', 'clowns', 'cake']);
   })
 
   it('difference', () => {
     let set = new Set;
     set.add('balloons');
     set.add('clowns');
-    expect(set.difference(['balloons', 'cake'])).toEqual(['clowns', 'cake']);
+    expect((set.difference(['balloons', 'cake'])).array).toEqual(['clowns', 'cake']);
   })
 
   it('static intersection', () => {
