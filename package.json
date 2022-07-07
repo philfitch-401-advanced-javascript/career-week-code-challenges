@@ -4,7 +4,7 @@
   "description": "",
   "main": "date-adder.js",
   "dependencies": {
-    "moment": "^2.24.0"
+    "moment": "^2.29.4"
   },
   "devDependencies": {
     "jest": "^24.9.0"
